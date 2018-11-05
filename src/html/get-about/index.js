@@ -6,10 +6,11 @@ let defaultHTML = `
 <html lang=en>
   <head>
     <meta charset=utf-8>
-    <title>Hi!</title>
+    <title>About</title>
   </head>
   <body style="font-family: sans-serif;">
-    <h1>Hello world!</h1>
+    <h1>About</h1>
+    <p>This is the about page.</p>
   </body>
 </html>
 `
