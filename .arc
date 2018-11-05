@@ -5,5 +5,5 @@ veil-t6t
 get /
 get /about
 
-@http
-get /generate
+@text
+/image
