@@ -1,11 +1,11 @@
 const Jimp = require('jimp')
-let begin = require('@architect/functions')
+// let begin = require('@architect/functions')
 
 let makeImage = (text, cb) => {
   return Jimp.read('src/http/get-generate/media/photo-1518640467707-6811f4a6ab73.jpg')
     .then(image => {
       return Jimp.loadFont(Jimp.FONT_SANS_64_WHITE).then(font => {
-        image.print(font, 20, 20, text);
+        image.print(font, 20, 20, text)
         return image.getBufferAsync(Jimp.MIME_PNG).then(buffer => {
           let str = buffer
           return cb(str)
@@ -14,7 +14,7 @@ let makeImage = (text, cb) => {
     }).catch(err => console.error(err))
 }
 
-exports.handler = async function http(req, res) {
+exports.handler = async function http(req) {
   try {
     let text = 'Hello, world'
 
